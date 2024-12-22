@@ -1,0 +1,36 @@
+{
+  "name": "ADI-UI",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/ADI-UI/src",
+  "prefix": "lib",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "options": {
+        "project": "libs/ADI-UI/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/ADI-UI/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/ADI-UI/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "outputs": ["{options.reportsDirectory}"],
+      "options": {
+        "reportsDirectory": "../../coverage/libs/ADI-UI"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    }
+  }
+}
