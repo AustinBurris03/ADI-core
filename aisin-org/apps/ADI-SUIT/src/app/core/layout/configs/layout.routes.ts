@@ -7,10 +7,31 @@ export const LayoutRoutes: Routes = [
       import('../layout.component').then((m) => m.LayoutComponent),
     children: [
       {
-        path: 'dashboard',
+        path: 'ADI',
         loadChildren: () =>
-          import('../../../public/configs/public.routes').then(
-            (m) => m.PublicRoutes
+          import('../../../public/modules/ADI/ADI.routes').then(
+            (m) => m.ADIRoutes
+          ),
+      },
+      {
+        path: 'Human-Resources',
+        loadChildren: () =>
+          import('../../../public/modules/Human-Resources/hr.routes').then(
+            (m) => m.HRRoutes
+          ),
+      },
+      {
+        path: 'Safety',
+        loadChildren: () =>
+          import('../../../public/modules/Safety/safety.routes').then(
+            (m) => m.SafetyRoutes
+          ),
+      },
+      {
+        path: 'Andons',
+        loadChildren: () =>
+          import('../../../public/modules/Andons/andons.routes').then(
+            (m) => m.SafetyRoutes
           ),
       },
     ],
