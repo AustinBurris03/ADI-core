@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 
-export const SafetyRoutes: Routes = [
+export const AddonsRoutes: Routes = [
   {
     path: '',
     loadComponent: () =>

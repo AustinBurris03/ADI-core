@@ -20,89 +20,108 @@ export class SidebarComponent implements OnInit {
   ngOnInit() {
     this.items = [
       {
-        label: 'Files',
-        icon: 'pi pi-file',
+        label: 'ADI',
+        icon: 'pi pi-chart-bar',
         items: [
           {
-            label: 'New',
-            icon: 'pi pi-plus',
-            command: () => {
-              this.messageService.add({
-                severity: 'success',
-                summary: 'Success',
-                detail: 'File created',
-                life: 3000,
-              });
-            },
-          },
-          {
-            label: 'Search',
-            icon: 'pi pi-search',
-            command: () => {
-              this.messageService.add({
-                severity: 'warn',
-                summary: 'Search Results',
-                detail: 'No results found',
-                life: 3000,
-              });
-            },
-          },
-          {
-            label: 'Print',
-            icon: 'pi pi-print',
-            command: () => {
-              this.messageService.add({
-                severity: 'error',
-                summary: 'Error',
-                detail: 'No printer connected',
-                life: 3000,
-              });
-            },
+            label: 'Reports',
+            icon: 'pi pi-folder',
+            items: [
+              { label: 'Alarms', routerLink: ['/ADI/reports/alarms'] },
+              { label: 'CP-CPK', routerLink: ['/ADI/reports/cp-cpk'] },
+              { label: 'DNA Report', routerLink: ['/ADI/reports/dna-report'] },
+              {
+                label: 'E4 Machine Report',
+                routerLink: ['/ADI/reports/e4-machine-report'],
+              },
+              {
+                label: 'E4 Part Machine Report',
+                routerLink: ['/ADI/reports/e4-part-machine-report'],
+              },
+              {
+                label: 'E4 Small Part Count',
+                routerLink: ['/ADI/reports/e4-small-part-count'],
+              },
+              {
+                label: 'FIFO Reports',
+                routerLink: ['/ADI/reports/fifo-reports'],
+              },
+              {
+                label: 'Live Machine Measurements',
+                routerLink: ['/ADI/reports/live-machine-measurements'],
+              },
+              {
+                label: 'Past Machine Measurements',
+                routerLink: ['/ADI/reports/past-machine-measurements'],
+              },
+              { label: 'Passdown', routerLink: ['/ADI/reports/passdown'] },
+              {
+                label: 'Power Usage Report',
+                routerLink: ['/ADI/reports/power-usage-report'],
+              },
+              {
+                label: 'PPDA Error Logs',
+                routerLink: ['/ADI/reports/ppda-error-logs'],
+              },
+              { label: 'QA Chart', routerLink: ['/ADI/reports/qa-chart'] },
+              {
+                label: 'Scrap Daily Tracker',
+                routerLink: ['/ADI/reports/scrap-daily-tracker'],
+              },
+              {
+                label: 'Conference Room Schedule',
+                routerLink: ['/ADI/reports/conference-room-schedule'],
+              },
+            ],
           },
         ],
       },
       {
-        label: 'Sync',
-        icon: 'pi pi-cloud',
+        label: 'Human Resources',
+        icon: 'pi pi-users',
         items: [
           {
-            label: 'Import',
-            icon: 'pi pi-cloud-download',
-            command: () => {
-              this.messageService.add({
-                severity: 'info',
-                summary: 'Downloads',
-                detail: 'Downloaded from cloud',
-                life: 3000,
-              });
-            },
+            label: 'ADI Apparel Store',
+            routerLink: ['/Human-Resources/adi-apparel-store'],
           },
           {
-            label: 'Export',
-            icon: 'pi pi-cloud-upload',
-            command: () => {
-              this.messageService.add({
-                severity: 'info',
-                summary: 'Shared',
-                detail: 'Exported to cloud',
-                life: 3000,
-              });
-            },
+            label: 'Benefits Links',
+            routerLink: ['/Human-Resources/benefits-links'],
           },
         ],
       },
       {
-        label: 'Sign Out',
-        icon: 'pi pi-sign-out',
-        command: () => {
-          this.messageService.add({
-            severity: 'info',
-            summary: 'Signed out',
-            detail: 'User logged out',
-            life: 3000,
-          });
-        },
+        label: 'Safety',
+        icon: 'pi pi-shield',
+        items: [
+          {
+            label: 'Emergency Response',
+            routerLink: ['/Safety/emergency-response'],
+          },
+          { label: 'Team', routerLink: ['/Safety/team'] },
+        ],
+      },
+      {
+        label: 'Andons',
+        icon: 'pi pi-bolt',
+        items: [
+          {
+            label: 'Daily Power Summary',
+            routerLink: ['/Andons/daily-power-summary'],
+          },
+          {
+            label: 'Finished Goods Robot',
+            routerLink: ['/Andons/finished-goods-robot'],
+          },
+          { label: 'Lineside Andons', routerLink: ['/Andons/lineside-andons'] },
+          {
+            label: 'QA Team Training Info',
+            routerLink: ['/Andons/qa-team-training-info'],
+          },
+          { label: 'Weekly Hoshin', routerLink: ['/Andons/weekly-hoshin'] },
+        ],
       },
     ];
+
   }
 }

@@ -31,7 +31,7 @@ export const LayoutRoutes: Routes = [
         path: 'Andons',
         loadChildren: () =>
           import('../../../public/modules/Andons/andons.routes').then(
-            (m) => m.SafetyRoutes
+            (m) => m.AddonsRoutes
           ),
       },
     ],
